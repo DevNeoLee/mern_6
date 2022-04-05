@@ -3,7 +3,7 @@ const path = require('path');
 const http = require('http');
 // const socketio = require('socket.io');
 
-const cors = require('cors');
+// const cors = require('cors');
 
 const db = require('./config/keys_dev').DB_URI
 
@@ -16,9 +16,9 @@ mongoose
 
 const express = require("express")
 const app = express()
-app.use(cors());
+// app.use(cors());
 
-const res = require("express/lib/response")
+// const res = require("express/lib/response")
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
