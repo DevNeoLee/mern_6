@@ -3,6 +3,8 @@ const path = require('path');
 const http = require('http');
 // const socketio = require('socket.io');
 
+const cors = require('cors');
+
 const db = require('./config/keys_dev').DB_URI
 
 const mongoose = require('mongoose')
@@ -14,6 +16,7 @@ mongoose
 
 const express = require("express")
 const app = express()
+app.use(cors());
 
 const res = require("express/lib/response")
 
