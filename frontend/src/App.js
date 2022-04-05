@@ -6,12 +6,12 @@ const App = function () {
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  useEffect(() => {
-    axios
-      .get("/api/users")
-      .then((users) => setUsers(users))
-      .catch((err) => console.log(err));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("/api/users")
+  //     .then((users) => setUsers(users))
+  //     .catch((err) => console.log(err));
+  // }, []);
 
   function submitForm() {
     if (username === "") {
