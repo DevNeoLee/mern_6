@@ -4,8 +4,8 @@ import axios from 'axios';
 const App = function () {
   const [users, setUsers] = useState(null);
 
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
+  // const [username, setUsername] = useState("");
+  // const [email, setEmail] = useState("");
   // useEffect(() => {
   //   axios
   //     .get("/api/users")
@@ -13,28 +13,28 @@ const App = function () {
   //     .catch((err) => console.log(err));
   // }, []);
 
-  function submitForm() {
-    if (username === "") {
-      alert("Please fill the username field");
-      return;
-    }
-    if (email === "") {
-      alert("Please fill the email field");
-      return;
-    }
-    axios
-      .post("/api/users", {
-        username: username,
-        email: email,
-      })
-      .then(function () {
-        alert("Account created successfully");
-        window.location.reload();
-      })
-      .catch(function () {
-        alert("Could not creat account. Please try again");
-      });
-  }
+  // function submitForm() {
+  //   if (username === "") {
+  //     alert("Please fill the username field");
+  //     return;
+  //   }
+  //   if (email === "") {
+  //     alert("Please fill the email field");
+  //     return;
+  //   }
+  //   axios
+  //     .post("/api/users", {
+  //       username: username,
+  //       email: email,
+  //     })
+  //     .then(function () {
+  //       alert("Account created successfully");
+  //       window.location.reload();
+  //     })
+  //     .catch(function () {
+  //       alert("Could not creat account. Please try again");
+  //     });
+  // }
   return (
     <>
       <h1>Flood Game</h1>
@@ -54,7 +54,7 @@ const App = function () {
           </ol>
         </>
       )}
-
+{/* 
       <form onSubmit={submitForm}>
         <input
           onChange={(e) => setUsername(e.target.value)}
@@ -67,7 +67,7 @@ const App = function () {
           placeholder="Enter your email address"
         />
         <input type="submit" />
-      </form>
+      </form> */}
     </>
   );
 };
