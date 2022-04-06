@@ -1,7 +1,11 @@
 
 import { Form, Tab, Sonnet, Tabs, Button, Alert } from "react-bootstrap";
 
-import Game from "./components/Game";
+import Game from "./pages/Game";
+import Game2 from "./pages/Game";
+import Game3 from "./pages/Game";
+import Game4 from "./pages/Game";
+import Result from "./pages/Result";
 import TheEnd from "./components/TheEnd";
 import Instruction from "./components/Instruction";
 import Welcome from "./components/Welcome";
@@ -331,10 +335,9 @@ export default function App({ ...props }) {
     <ConsigneeFields step={step} />,
     // <BuyerFields step={step} />,
     // <GoodsFields step={step} />,
-    <Game />,
-    <ShipperFields step={step} />,
-    <ExporterFields step={step} />,
-    <ConsigneeFields step={step} />,
+    // <ShipperFields step={step} />,
+    // <ExporterFields step={step} />,
+    // <ConsigneeFields step={step} />,
     <TheEnd />
 
   ];
@@ -351,6 +354,11 @@ export default function App({ ...props }) {
           </Form>
         } />
         <Route path="/game" element={ <Game />} />
+        <Route path="/game2" element={<Game2 />} />
+        <Route path="/game3" element={<Game3 />} />
+        <Route path="/game4" element={<Game4 />} />
+        <Route path="/result" element={<Result />} />
+        {/* <Route path="/game" element={<Game />} /> */}
       </Routes>
     </Router>
   );
