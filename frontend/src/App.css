@@ -43,3 +43,12 @@
   width: 500px;
   margin: 0 auto;
 }
+
+.logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 100%;
+}
