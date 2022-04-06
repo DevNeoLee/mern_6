@@ -1,6 +1,11 @@
 
 import { Form, Tab, Sonnet, Tabs, Button, Alert } from "react-bootstrap";
 
+import Game from "./components/Game";
+import TheEnd from "./components/TheEnd";
+import Instruction from "./components/Instruction";
+import Welcome from "./components/Welcome";
+
 import { useState } from "react";
 
 export default function App({ ...props }) {
@@ -314,11 +319,19 @@ export default function App({ ...props }) {
   // }
 
   const fieldGroups = [
+    <Welcome />,
+    <Instruction />,
     <ShipperFields step={step} />,
     <ExporterFields step={step} />,
     <ConsigneeFields step={step} />,
-    <BuyerFields step={step} />,
-    <GoodsFields step={step} />,
+    // <BuyerFields step={step} />,
+    // <GoodsFields step={step} />,
+    <Game />,
+    <ShipperFields step={step} />,
+    <ExporterFields step={step} />,
+    <ConsigneeFields step={step} />,
+    <TheEnd />
+
   ];
 
   return (
