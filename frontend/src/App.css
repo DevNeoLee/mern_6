@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.section {
+  background-color: #61dafb;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+}

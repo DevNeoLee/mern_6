@@ -6,6 +6,11 @@ import TheEnd from "./components/TheEnd";
 import Instruction from "./components/Instruction";
 import Welcome from "./components/Welcome";
 
+import Home from './pages/Home'
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+import './App.css'
 import { useState } from "react";
 
 export default function App({ ...props }) {
@@ -277,7 +282,7 @@ export default function App({ ...props }) {
 
   const Buttons = () => (
     <section >
-      {step > 0 && (
+      {/* {step > 0 && (
         <Button
           type="button"
           onClick={() => {
@@ -286,7 +291,7 @@ export default function App({ ...props }) {
         >
           BACK
         </Button>
-      )}
+      )} */}
       {step === fieldGroups.length - 1 && (
         <Button type="submit" >
           SUBMIT
@@ -335,10 +340,18 @@ export default function App({ ...props }) {
   ];
 
   return (
-        <Form onSubmit={onSubmit}>
-          {fieldGroups[step]}
-          <Buttons />
-        </Form>
-
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/form" element={
+          <Form onSubmit={onSubmit}
+          className="section">
+            {fieldGroups[step]}
+            <Buttons />
+          </Form>
+        } />
+        <Route path="/game" element={ <Game />} />
+      </Routes>
+    </Router>
   );
 }
