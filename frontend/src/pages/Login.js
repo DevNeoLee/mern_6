@@ -1,13 +1,13 @@
 
-import { useState } from "react";
+import { useState } from "react"
 
-
+import { Link } from "react-router-dom"
 // import logo from "../../../logo.png";
 // import googleLogo from "../../../google_logo.png";
 // import facebookLogo from "../../../facebook_logo.png";
 
 // import { ArrowLeftCircle } from "bootstrap-icons";
-import styles from '../App.css'
+import '../App.css'
 
 import { useTransition, useSpring, animated } from "react-spring";
 
@@ -48,27 +48,27 @@ export default function LogIn() {
     });
 
     return (
-        <div>
+        <div className="container">
             {firstTime ? (
-                <Form>
-                    <div>
+                <Form className="form">
+                    <div className="upperForm">
                         <div>
-                            <i class="bi bi-arrow-left-circle"></i>
+                            <i className="bi bi-arrow-left-circle"></i>
                             {/* <ArrowLeftCircle
                                 onClick={handleClickFirstTime}
                                 size={20}
                                 aria-label="Back Button"
                             />{" "} */}
                         </div>
-                        <a href="/">
+                        <Link to="/">
                             <img
                                 src="/logo2.png"
                                 alt="Logo"
                                 width={125}
                                 height={39}
-                                className={styles.logo}
+                                className="logo"
                             />
-                        </a>
+                        </Link>
                         <h2>Sign up</h2>
                     </div>
                     <p>Please enter your infomation to sign up.</p>
@@ -85,13 +85,13 @@ export default function LogIn() {
                         <Form.Label>Confirm Password</Form.Label>
                         <Form.Control type="password" placeholder="Confirm Password" />
                     </Form.Group>
-                    <a className={styles.signupButton} onClick={handleClickFirstTime}>
-                        <p>Log in</p>
-                    </a>
+                    <div className="signupButton" onClick={handleClickFirstTime}>
+                        <span>Log in</span>
+                    </div>
                     <Button variant="primary" type="submit">
                         <div>Continue</div>
                     </Button>
-                    <div className={styles.or}>or </div>
+                    <div className="or">or </div>
                     <Button
                         type="submit"
                         style={{
@@ -111,7 +111,7 @@ export default function LogIn() {
                                 alt="Google Logo"
                                 width={42}
                                 height={42}
-                                className={styles.logo}
+                                className="logo"
                             />
                         </div>
                     </Button>
@@ -134,24 +134,26 @@ export default function LogIn() {
                                 alt="Facebook Logo"
                                 width={25}
                                 height={25}
-                                className={styles.logoFacebook}
+                                className="logoFacebook"
                             />
                         </div>
                     </Button>
+                    <Link to="/form"><Button>Demo</Button></Link>
+                   
                 </Form>
             ) : (
-                <Form className={styles.form}>
-                    <div className={styles.upperForm}>
+                <Form className="form">
+                    <div className="upperForm">
                         {transition((style, item) =>
                             item ? (
                                 <animated.div
                                     style={style}
-                                    className={styles.upperFormBackButton}
+                                    className="upperFormBackButton"
                                 >
-                                    <i class="bi bi-arrow-left-circle"></i>
+                                    <i className="bi bi-arrow-left-circle"></i>
                                     {/* <ArrowLeftCircle
                                         onClick={handleClickForgot}
-                                        className={styles.backButton}
+                                        className="backButton"
                                         size={20}
                                         aria-label="Back Button"
                                     />{" "} */}
@@ -160,15 +162,15 @@ export default function LogIn() {
                                 ""
                             )
                         )}
-                        <a href="/">
+                        <Link to="/">
                             <img
-                                src='/logo.png'
+                                src='/logo2.png'
                                 alt=""
                                 width={125}
                                 height={39}
-                                className={styles.logo}
+                                className="logo"
                             />
-                        </a>
+                        </Link>
 
                         {transition2((style, item) =>
                             item ? (
@@ -214,15 +216,15 @@ export default function LogIn() {
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control type="password" placeholder="Password" />
                                 </Form.Group>
-                                <a className={styles.forgotButton} onClick={handleClickForgot}>
+                                <div className="forgotButton" onClick={handleClickForgot}>
                                     <p>Forgot password?</p>
-                                </a>
-                                <a
-                                    className={styles.signupButton}
+                                </div>
+                                <div
+                                    className="signupButton"
                                     onClick={handleClickFirstTime}
                                 >
-                                    <p>Sign Up</p>
-                                </a>
+                                    <span>Sign Up</span>
+                                </div>
                             </animated.div>
                         )
                     )}
@@ -239,7 +241,7 @@ export default function LogIn() {
                             <Button variant="primary" type="submit">
                                 <div>Continue</div>
                             </Button>
-                            <div className={styles.or}>or </div>
+                            <div className="or">or </div>
                             <Button
                                 type="submit"
                                 style={{
@@ -259,7 +261,7 @@ export default function LogIn() {
                                         alt="Google Logo"
                                         width={42}
                                         height={42}
-                                        className={styles.logo}
+                                        className="logo"
                                     />
                                 </div>
                             </Button>
@@ -282,10 +284,11 @@ export default function LogIn() {
                                         alt="Facebook Logo"
                                         width={25}
                                         height={25}
-                                        className={styles.logoFacebook}
+                                        className="logoFacebook"
                                     />
                                 </div>
                             </Button>
+                            <Link to="/form"><Button>Demo</Button></Link>
                         </>
                     )}
                 </Form>
