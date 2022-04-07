@@ -11,6 +11,7 @@ import Instruction from "./components/Instruction";
 import Welcome from "./components/Welcome";
 
 import Home from './pages/Home'
+import Login from './pages/Login'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -345,7 +346,7 @@ export default function App({ ...props }) {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
         <Route path="/form" element={
           <Form onSubmit={onSubmit}
           className="section">
