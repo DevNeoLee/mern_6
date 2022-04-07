@@ -132,7 +132,7 @@ export default function LogIn() {
                             />
                         </div>
                     </Button>
-                    <Link to="/form"><Button>Demo</Button></Link>
+                    <Link to="/form"><Button><div>Demo</div></Button></Link>
                    
                 </Form>
             ) : (
@@ -276,7 +276,7 @@ export default function LogIn() {
                                     />
                                 </div>
                             </Button>
-                            <Link to="/form"><Button>Demo</Button></Link>
+                            <Link to="/form"><Button><div>Demo</div></Button></Link>
                         </>
                     )}
                 </Form>

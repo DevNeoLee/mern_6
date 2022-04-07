@@ -1,3 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: lightcoral; */
+}
+
+:root {
+  --lightblue: #64BEFF;
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --green: #2ebe7e;
+  --dark: #13404f;
+  --pcbblue: #002c71;
+}
+
+#root {
+  /* background-color: var(--lightblue); */
+}
+
 .App {
   text-align: center;
 }
@@ -116,7 +136,7 @@
   width: 100%;
   border-radius: 0.2rem;
   height: 3.4rem;
-  background-color: #002c71;
+  background-color: var(--blue);
   font-size: 0.9em;
 }
 
@@ -167,23 +187,27 @@
 }
 
 .forgotButton {
-  color: #002c71;
+  color: var(--dark);
   /* color: red; */
   text-decoration: none;
   cursor: pointer;
 }
 
 .signupButton {
-  color: #002c71;
+  color: var(--dark);
   /* color: red; */
   text-decoration: none;
   cursor: pointer;
   margin-bottom: 15px;
 }
 
+.forgotButton:hover, .signupButton:hover {
+  color: var(--blue);
+}
+
 .form button .oauthButton button {
   background-color: white;
-  border: var(--pcbColorBlue);
+  border: var(--blue);
   /* color: #002c71; */
   width: 100%;
   border-radius: 0.2rem;
@@ -201,7 +225,7 @@
 }
 
 .form button:hover {
-  background-color: #002c71;
+  background-color: var(--lightblue);
 }
 
 .form button:hover div {
