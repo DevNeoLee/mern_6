@@ -191,6 +191,7 @@
   /* color: red; */
   text-decoration: none;
   cursor: pointer;
+  transition: 350ms ease-in-out;
 }
 
 .signupButton {
@@ -199,10 +200,12 @@
   text-decoration: none;
   cursor: pointer;
   margin-bottom: 15px;
+  transition: 350ms ease-in-out;
 }
 
 .forgotButton:hover, .signupButton:hover {
-  color: var(--blue);
+  color: var(--green);
+  transition: 350ms ease-in-out;
 }
 
 .form button .oauthButton button {
@@ -225,7 +228,8 @@
 }
 
 .form button:hover {
-  background-color: var(--lightblue);
+  background-color: var(--green);
+  transition: 350ms ease-in-out;
 }
 
 .form button:hover div {
