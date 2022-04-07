@@ -5,7 +5,7 @@ const http = require('http');
 
 // const cors = require('cors');
 
-const db = require('./config/keys_dev').DB_URI
+const db = require('./config/keys')
 
 const mongoose = require('mongoose')
 
