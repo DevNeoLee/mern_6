@@ -12,6 +12,7 @@
   --green: #2ebe7e;
   --dark: #13404f;
   --pcbblue: #002c71;
+  --formBackground: rgb(236, 236, 236);
 }
 
 #root {
@@ -154,10 +155,12 @@
 }
 
 .form label {
-  color: darkgray;
-  font-size: 0.8rem;
+  /* color: darkgray; */
+  /* font-size: 0.8rem; */
   display: none;
 }
+
+
 
 .form input[type="email"],
 .form input[type="password"] {
@@ -258,4 +261,19 @@
   .form {
     width: 350px;
   }
+}
+
+.formGeneral {
+    margin: 1rem;
+    width: 750px;
+    padding: 1.3rem;
+    /* margin: 0 auto; */
+    /* display: flex; */
+    /* align-items: center;
+      text-align: center; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+    /* box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px; */
+    transition: 250ms ease-in-out;
+    background-color: rgb(241, 240, 240);
 }

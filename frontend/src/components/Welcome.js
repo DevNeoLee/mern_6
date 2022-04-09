@@ -11,7 +11,7 @@ export default function Welcome() {
                 ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo consequat. Duis aute irure dolor in reprehenderit </p>
-            <Link to="/game1"><button>Enter</button></Link>
+            <Link to="/formgeneral"><button>Enter</button></Link>
         </>
     )
 }

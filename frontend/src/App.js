@@ -9,6 +9,13 @@ import Result from "./pages/Result";
 import TheEnd from "./components/TheEnd";
 import Instruction from "./components/Instruction";
 import Welcome from "./components/Welcome";
+import FormGeneral from "./pages/FormGeneral/FormGeneral";
+import FormPreGame from "./pages/FormPreGame/FormPreGame";
+import FormPostGame from "./pages/FormPostGame/FormPostGame";
+
+
+import Input from "./components/Input"
+import RadioQuestionForm from "./components/Radio"
 
 import Home from './pages/Home'
 import Login from './pages/Login'
@@ -44,18 +51,6 @@ export default function App({ ...props }) {
 
     console.log("Data Created on DB: ", response);
   };
-
-  const Input = ({ label, name, required, type, placeholder, value }) => (
-    <Form.Group className="mb-3">
-      <Form.Label>{label}</Form.Label>
-      <Form.Control
-        type={type}
-        placeholder={placeholder}
-        id={name}
-        value={value}
-      />
-    </Form.Group>
-  );
 
   const ShipperFields = () => (
     <section>
@@ -347,6 +342,9 @@ export default function App({ ...props }) {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/formgeneral" element={<FormGeneral />} />
+        <Route path="/formpregame" element={<FormPreGame />} />
+        <Route path="/formpostgame" element={<FormPostGame />} />
         <Route path="/form" element={
           <Form onSubmit={onSubmit}
           className="section">
@@ -358,8 +356,8 @@ export default function App({ ...props }) {
         <Route path="/game2" element={<Game2 />} />
         <Route path="/game3" element={<Game3 />} />
         <Route path="/game4" element={<Game4 />} />
+        <Route path="/welcome" element={<Welcome />} />
         <Route path="/result" element={<Result />} />
-        {/* <Route path="/game" element={<Game />} /> */}
       </Routes>
     </Router>
   );
