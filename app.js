@@ -54,4 +54,7 @@ function handleConnection(socket) {
 
 // app.listen(port, () => console.log(`Server is running on the port ${port}, from express server`))
 server.listen(port, () => console.log(`Server is running on the port ${port}, from express server`))
-wss.on("connection", handleConnection)
+wss.on("connection", (socket) => {
+    console.log('connection begin, socket: ')
+    socket.send('hello socket!')
+})
