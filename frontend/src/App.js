@@ -28,8 +28,8 @@ import { useState } from "react";
 export default function App({ ...props }) {
 
   
-  // const socket = new WebSocket(`ws://${window.location.host}`)
-  const socket = new WebSocket('ws://localhost:5000')
+  const socket = new WebSocket(`wss://${window.location.host}`)
+  // const socket = new WebSocket('wss://localhost:5000')
   console.log("socket: ", socket)
 
   socket.addEventListener("open", () => {
