@@ -1,9 +1,15 @@
 const path = require('path');
 
+const WebSocket = require('ws')
+
+const express = require("express")
 const http = require('http');
 // const socketio = require('socket.io');
 
-// const cors = require('cors');
+const cors = require('cors');
+
+const app = express()
+app.use(cors());
 
 const db = require('./config/keys')
 
@@ -12,11 +18,8 @@ const mongoose = require('mongoose')
 mongoose
     .connect(db, { useNewUrlParser: true })
     .then(() => console.log("Connected to MongoDB successfully"))
-    .catch(err => console.log(err));
+    .catch(err => console.log("mongo connection error: ", err.message));
 
-const express = require("express")
-const app = express()
-// app.use(cors());
 
 // const res = require("express/lib/response")
 
@@ -37,6 +40,11 @@ app.use(bodyParser.json())
 
 app.use("/api/game", game);
 
+//combining http and websocket in the same server
+const server =  http.createServer(app)
+const wss = new WebSocket.Server({server})
+
 const port = process.env.PORT || 5000
 
-app.listen(port, () => console.log(`Server is runnidng on the port ${port}, from express server`))
+// app.listen(port, () => console.log(`Server is runnidng on the port ${port}, from express server`))
+server.listen(port, () => console.log(`Server is runnidng on the port ${port}, from express server`))
