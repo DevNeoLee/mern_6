@@ -47,7 +47,7 @@ export default function FormPostGame({ step }) {
               ))}
             </Form.Group>
           </fieldset>
-          <Link to="/result"><Button>Next</Button></Link>
+          <Link to="/theend"><Button>Next</Button></Link>
         </Form>
       </div>
     </div>
