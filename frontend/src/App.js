@@ -29,11 +29,19 @@ export default function App({ ...props }) {
 
   
   const socket = new WebSocket(`wss://${window.location.host}`)
-  // const socket = new WebSocket('wss://localhost:5000')
+  // const socket = new WebSocket('ws://localhost:5000')
   console.log("socket: ", socket)
 
   socket.addEventListener("open", () => {
     console.log("socket open!")
+  })
+
+  socket.addEventListener("message", (message) => {
+    console.log("socket got message: ", message)
+  })
+
+  socket.addEventListener("close", () => {
+    console.log("socket closed!")
   })
 
   const [step, setStep] = useState(0);
