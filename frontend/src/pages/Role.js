@@ -1,13 +1,10 @@
-
-
 import { Form, Button } from "react-bootstrap"
 import { useState } from 'react'
 import "../App.css"
 
 import { Link } from "react-router-dom"
 
-export default function Result({ step }) {
-
+export default function Role({ step }) {
     return (
         <>
             <div className="container">
@@ -20,14 +17,13 @@ export default function Result({ step }) {
                             </div>
                         </a>
                     </div>
-                    <h1>Result</h1>
-                    <h2>...</h2>
-                    <p>Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit </p>
-                    <Link to="/theend"><Button>Next</Button></Link>
+                    <h1>Your Role</h1>
+                    <p>You are randomly assigned as Norman, a local
+                        resident and homeowner. </p>
+                    <p>Your task is to decide
+                        1) when to evacuate and
+                        2) which route to use for evacuation.</p>
+                    <Link to="/game"><Button>Continue</Button></Link>
                 </Form>
             </div>
         </>

@@ -6,8 +6,7 @@ import "../App.css"
 
 import { Link } from "react-router-dom"
 
-export default function Game({ step }) {
-
+export default function Instruction({ step }) {
   return (
     <>
       <div className="container">
@@ -20,14 +19,11 @@ export default function Game({ step }) {
               </div>
             </a>
           </div>
-            <h1>Flood Game</h1>
-            <h2>Round 1</h2>
-            <p>Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit </p>
-            <Link to="/formpostgame"><Button>Go</Button></Link>
+          <h1>Instructions on How to Play</h1>
+          <p>Please follow the instructions read out by the moderator now. </p>
+          <p>Note that you will play as part of a group of five participants who have
+            been randomly assigned to one of the following three different roles.</p>
+          <Link to="/role"><Button>Begin</Button></Link>
         </Form>
       </div>
     </>

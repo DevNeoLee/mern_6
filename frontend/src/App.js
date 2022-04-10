@@ -7,12 +7,12 @@ import Game3 from "./pages/Game";
 import Game4 from "./pages/Game";
 import Result from "./pages/Result";
 import TheEnd from "./components/TheEnd";
-import Instruction from "./components/Instruction";
 import Welcome from "./components/Welcome";
 import FormGeneral from "./pages/FormGeneral/FormGeneral";
 import FormPreGame from "./pages/FormPreGame/FormPreGame";
 import FormPostGame from "./pages/FormPostGame/FormPostGame";
-
+import Instruction from "./pages/Instruction";
+import Role from "./pages/Role";
 
 import Input from "./components/Input"
 import RadioQuestionForm from "./components/Radio"
@@ -358,6 +358,9 @@ export default function App({ ...props }) {
         <Route path="/game4" element={<Game4 />} />
         <Route path="/welcome" element={<Welcome />} />
         <Route path="/result" element={<Result />} />
+        <Route path="/theend" element={<TheEnd />} />
+        <Route path="/instruction" element={<Instruction />} />          
+        <Route path="/role" element={<Role />} />          
       </Routes>
     </Router>
   );
