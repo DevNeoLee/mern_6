@@ -53,8 +53,14 @@ function handleConnection(socket) {
 //websocket events
 
 // app.listen(port, () => console.log(`Server is running on the port ${port}, from express server`))
-server.listen(port, () => console.log(`Server is running on the port ${port}, from express server`))
 wss.on("connection", (socket) => {
     console.log('connection begin, socket: ')
+    socket.on("close", () => {console.log("closed socket")})
+    socket.on("message", (message, isBinary) => {
+        const output = isBinary ? message : message.toString();
+        console.log(output)
+    })
     socket.send('hello socket!')
 })
+
+server.listen(port, () => console.log(`Server is running on the port ${port}, from express server`))

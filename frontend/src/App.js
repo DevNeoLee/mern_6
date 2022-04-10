@@ -44,7 +44,12 @@ export default function App({ ...props }) {
     console.log("socket closed!")
   })
 
+  setTimeout(()=> {
+    socket.send("hello from browser!")
+  }, 10000);
+
   const [step, setStep] = useState(0);
+
 
   const onSubmit = async (content) => {
     console.log("content: ", content);
