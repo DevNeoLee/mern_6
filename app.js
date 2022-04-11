@@ -46,17 +46,24 @@ const wss = new WebSocket.Server({server})
 
 const port = process.env.PORT || 5000
 
+//sockets array
+const sockets = []
+
 //helping functions for WS events
 
 //websocket events listener
 wss.on("connection", (socket) => {
+    sockets.push(socket)
     console.log('Connected, socket connection begins')
     socket.on("close", () => {console.log("Disconnected: closed socket")})
     socket.on("message", (message, isBinary) => {
         const output = isBinary ? message : message.toString();
-        console.log(output)
+        console.log("message: ", output)
+
+        sockets.forEach(eachSocket=> {
+            eachSocket.send(output)
+        })
     })
-    socket.send('hello socket!')
 })
 
 server.listen(port, () => console.log(`Server is running on the port ${port}, from express server`))
