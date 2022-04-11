@@ -5,6 +5,26 @@ import "../App.css"
 import { Link } from "react-router-dom"
 
 export default function Role({ step }) {
+    //sockets eventListeners
+    const socket = new WebSocket(`wss://${window.location.host}`)
+    // const socket = new WebSocket('ws://localhost:5000')
+    console.log("socket: ", socket)
+
+    socket.addEventListener("open", () => {
+        console.log("socket open!")
+    })
+
+    socket.addEventListener("message", (message) => {
+        console.log("socket got message: ", message)
+    })
+
+    socket.addEventListener("close", () => {
+        console.log("socket closed!")
+    })
+
+    setTimeout(() => {
+        socket.send("hello from browser!")
+    }, 3000);
     return (
         <>
             <div className="container2">
@@ -26,7 +46,7 @@ export default function Role({ step }) {
                     <p>Your task is to decide
                         1) when to evacuate and
                         2) which route to use for evacuation.</p>
-                    <Link to="/game"><Button>Continue</Button></Link>
+                    <Link to="/norman1"><Button>Continue</Button></Link>
                 </Form>
                 <Form className="form">
                     <div className="upperForm">

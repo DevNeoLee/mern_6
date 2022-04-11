@@ -14,6 +14,12 @@ import FormPostGame from "./pages/FormPostGame/FormPostGame";
 import Instruction from "./pages/Instruction";
 import Role from "./pages/Role";
 
+import Norman1 from "./pages/GameNorman/Norman1"
+import Norman2 from "./pages/GameNorman/Norman2"
+import Norman3 from "./pages/GameNorman/Norman3"
+import Norman4 from "./pages/GameNorman/Norman4"
+import Norman5 from "./pages/GameNorman/Norman5"
+
 import Input from "./components/Input"
 import RadioQuestionForm from "./components/Radio"
 
@@ -27,29 +33,7 @@ import { useState } from "react";
 
 export default function App({ ...props }) {
 
-  
-  const socket = new WebSocket(`wss://${window.location.host}`)
-  // const socket = new WebSocket('ws://localhost:5000')
-  console.log("socket: ", socket)
-
-  socket.addEventListener("open", () => {
-    console.log("socket open!")
-  })
-
-  socket.addEventListener("message", (message) => {
-    console.log("socket got message: ", message)
-  })
-
-  socket.addEventListener("close", () => {
-    console.log("socket closed!")
-  })
-
-  setTimeout(()=> {
-    socket.send("hello from browser!")
-  }, 10000);
-
   const [step, setStep] = useState(0);
-
 
   const onSubmit = async (content) => {
     console.log("content: ", content);
@@ -375,6 +359,12 @@ export default function App({ ...props }) {
             <Buttons />
           </Form>
         } />
+        <Route path="/norman1" element={<Norman1 />} />
+        <Route path="/norman2" element={<Norman2 />} />
+        <Route path="/norman3" element={<Norman3 />} />
+        <Route path="/norman4" element={<Norman4 />} />
+        <Route path="/norman5" element={<Norman5 />} />
+        
         <Route path="/game" element={ <Game />} />
         <Route path="/game2" element={<Game2 />} />
         <Route path="/game3" element={<Game3 />} />
