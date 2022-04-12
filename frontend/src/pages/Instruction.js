@@ -21,7 +21,7 @@ export default function Instruction({ step }) {
           </div>
           <h1>Instructions on How to Play</h1>
           <p>Please follow the instructions read out by the moderator now. </p>
-          <p>Note that you will play as part of a group of five participants who have
+          <p>Note that you will play as part of a group of five participants(1 Erica, 1 Pete, and 3 Normans) who have
             been randomly assigned to one of the following three different roles.</p>
           <Link to="/role"><Button>Begin</Button></Link>
         </Form>

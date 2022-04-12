@@ -20,6 +20,18 @@ import Norman3 from "./pages/GameNorman/Norman3"
 import Norman4 from "./pages/GameNorman/Norman4"
 import Norman5 from "./pages/GameNorman/Norman5"
 
+import Erica1 from "./pages/GameErica/Erica1"
+import Erica2 from "./pages/GameErica/Erica2"
+import Erica3 from "./pages/GameErica/Erica3"
+import Erica4 from "./pages/GameErica/Erica4"
+import Erica5 from "./pages/GameErica/Erica5"
+
+import Pete1 from "./pages/GamePete/Pete1"
+import Pete2 from "./pages/GamePete/Pete2"
+import Pete3 from "./pages/GamePete/Pete3"
+import Pete4 from "./pages/GamePete/Pete4"
+import Pete5 from "./pages/GamePete/Pete5"
+
 import Input from "./components/Input"
 import RadioQuestionForm from "./components/Radio"
 
@@ -364,6 +376,18 @@ export default function App({ ...props }) {
         <Route path="/norman3" element={<Norman3 />} />
         <Route path="/norman4" element={<Norman4 />} />
         <Route path="/norman5" element={<Norman5 />} />
+
+        <Route path="/Pete1" element={<Pete1 />} />
+        <Route path="/Pete2" element={<Pete2 />} />
+        <Route path="/Pete3" element={<Pete3 />} />
+        <Route path="/Pete4" element={<Pete4 />} />
+        <Route path="/Pete5" element={<Pete5 />} />
+
+        <Route path="/Erica1" element={<Erica1 />} />
+        <Route path="/Erica2" element={<Erica2 />} />
+        <Route path="/Erica3" element={<Erica3 />} />
+        <Route path="/Erica4" element={<Erica4 />} />
+        <Route path="/Erica5" element={<Erica5 />} />
         
         <Route path="/game" element={ <Game />} />
         <Route path="/game2" element={<Game2 />} />

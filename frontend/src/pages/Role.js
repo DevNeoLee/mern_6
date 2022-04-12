@@ -61,11 +61,13 @@ export default function Role({ step }) {
                     <div className="person">
                         <img src="/erica.png" />
                     </div>
-                    <p>You are randomly assigned as Erica. </p>
-                    <p>Your task is to decide
-                        1) ...
-                        2) ...</p>
-                    <Link to="/game"><Button>Continue</Button></Link>
+                    <p>You are randomly assigned as Erica. the city’s manager
+                        for emergency response.</p>
+                    <p>
+                        Your task is to</p>
+                       <p> 1) engage in risk communication and</p>
+                        <p>2) provide guidance on the recommended actions</p>
+                    <Link to="/erica1"><Button>Continue</Button></Link>
                 </Form>
                 <Form className="form">
                     <div className="upperForm">
@@ -80,11 +82,13 @@ export default function Role({ step }) {
                     <div className="person">
                         <img src="/pete.png" />
                     </div>
-                    <p>You are randomly assigned as Pete. </p>
-                    <p>Your task is to decide
-                        1) ...
-                        2) ....</p>
-                    <Link to="/game"><Button>Continue</Button></Link>
+
+                    <p>You are randomly assigned as Pete, a power utility
+                        manager.</p>
+                    <p>Your task is to decide</p>
+                    <p>1) whether or not shut down a power substation with
+                        a large service area serving thousands of homes.</p>
+                    <Link to="/pete1"><Button>Continue</Button></Link>
                 </Form>
             </div>
         </>
