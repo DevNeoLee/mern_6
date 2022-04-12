@@ -56,7 +56,7 @@ export default function Erica2({ step }) {
                         </div>
                     </div>
                     <div className="graymap">
-                        <img src="/graymapErica.png" width="400px" />
+                        <img src="/grayMapErica.png" width="400px" />
                     </div>
                     <Link to="/Erica3"><Button>Continue</Button></Link>
                 </Form>
