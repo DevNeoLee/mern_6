@@ -6,8 +6,8 @@ import { Link } from "react-router-dom"
 
 export default function Role({ step }) {
     //sockets eventListeners
-    const socket = new WebSocket(`wss://${window.location.host}`)
-    // const socket = new WebSocket('ws://localhost:5000')
+    // const socket = new WebSocket(`wss://${window.location.host}`)
+    const socket = new WebSocket('ws://localhost:5000')
     console.log("socket: ", socket)
 
     socket.addEventListener("open", () => {
